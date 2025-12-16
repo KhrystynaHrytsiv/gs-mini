@@ -13,10 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Monorepo Demo</h1>
-        <p>{message ? message : "Cargando mensaje del backend..."}</p>
-      </header>
+      Твоя карточка тут!
     </div>
   );
 }

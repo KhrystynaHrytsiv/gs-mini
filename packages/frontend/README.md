@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Day 4 — FullStack Demo (Frontend + Backend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository is a **demo sample for Day 4** of the mini-course.  
+Goal: show the **full picture of a web service** — how **Frontend → Backend → Database (optional) → Frontend** works.
 
-## Available Scripts
+> It’s not a “perfect production app”. It’s a clear, beginner-friendly **fullstack example**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## What you’ll learn here
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- What **Frontend** does (UI + user actions)
+- What **Backend** does (API + logic)
+- How they communicate via **HTTP requests**
+- How data can be stored (optional / simple demo approach)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend:** HTML / CSS / JavaScript *(or React, if you use the React version)*
+- **Backend:** Node.js + Express
+- **Data:** in-memory array (for simplicity)  
+  *(you can replace it with a real DB later: MongoDB/PostgreSQL)*
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How it works (Big Picture)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. User clicks a button on the **Frontend**
+2. Frontend sends a request to the **Backend API**
+3. Backend processes the request (logic)
+4. Backend returns a response (JSON)
+5. Frontend shows the result in the UI
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## API Endpoints (example)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `GET /api/health` — check that server is running
+- `GET /api/profile` — returns demo profile data
+- `POST /api/message` — sends a message (demo logic)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Exact endpoints may differ depending on your implementation — check the `server` folder.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```txt
+.
+├── client/               # Frontend (UI)
+│   ├── index.html
+│   ├── styles.css
+│   └── script.js
+├── server/               # Backend (API)
+│   ├── index.js
+│   └── package.json
+└── README.md
